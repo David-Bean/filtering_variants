@@ -1,4 +1,9 @@
-#!/bin/bash
+#SBATCH --account=utu
+#SBATCH --partition=lonepeak
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH -o slurm-%j.out-%N
+#SBATCH -e slurm-%j.err-%N#!/bin/bash
 
 {
 usage="$(basename "$0") [-h] [-l <SRA_list>] [-g <reference_genome.fasta>] [-a <Frequency>] [-t <threads>]
